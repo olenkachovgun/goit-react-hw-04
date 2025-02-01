@@ -1,0 +1,41 @@
+.header {
+    background-color: rgb(7, 62, 61);
+    width: 100%;
+    padding: 10px 0;
+}
+
+form {
+    position: relative;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-42%);
+    padding: 4px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.iconSearch {
+    height: 22px;
+    width: 22px;
+}
+
+input {
+    min-width: 235px;
+    padding: 6px 10px 6px 28px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px #b7babc;
+
+}
+
+input:hover,
+input:focus,
+input:active {
+    box-shadow: 1px 1px 10px #dce0e3;
+
+}

@@ -1,0 +1,20 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.gallery {
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+li div {
+    width: 150px;
+    height: 150px;
+
+}
