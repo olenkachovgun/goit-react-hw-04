@@ -1,7 +1,15 @@
 import s from "./SearchBar.module.css";
 import { CiSearch } from "react-icons/ci";
+import { useState } from "react";
 
-const SearchBar = (handleSubmit, handleChange) => {
+const SearchBar = ({ onSubmit }) => {
+  const [value, setValue] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(value);
+    setValue("");
+  };
   return (
     <header className={s.header}>
       <form onSubmit={handleSubmit}>
@@ -9,7 +17,10 @@ const SearchBar = (handleSubmit, handleChange) => {
           <CiSearch className={s.iconSearch} />
         </button>
         <input
-          onChange={handleChange}
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+          value={value}
           type="text"
           autoComplete="off"
           autoFocus
