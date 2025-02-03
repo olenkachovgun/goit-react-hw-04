@@ -1,14 +1,19 @@
 import s from "./ImageCard.module.css";
-const ImageCard = ({ photo }) => {
+import { FcLike } from "react-icons/fc";
+const ImageCard = ({ photo, openModal }) => {
   return (
-    <div>
+    <div className={s.card}>
       <img
         className={s.image}
         src={photo.urls.small}
         alt={photo.alt_description}
         loading="lazy"
-        onClick={() => window.open(photo.links.html, "_blank")}
+        onClick={openModal}
       />
+      <div className={s.likesContent}>
+        <FcLike />
+        <span className={s.likes}>{photo.likes}</span>
+      </div>
     </div>
   );
 };

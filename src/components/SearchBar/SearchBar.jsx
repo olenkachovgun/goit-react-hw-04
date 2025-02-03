@@ -6,6 +6,11 @@ const SearchBar = ({ onSubmit }) => {
   const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
+    value.trim();
+    console.log(typeof value);
+    // if (!value) {
+    //   return console.log(value);
+    // }
     e.preventDefault();
     onSubmit(value);
     setValue("");

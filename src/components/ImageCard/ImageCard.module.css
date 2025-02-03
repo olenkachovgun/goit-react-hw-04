@@ -1,4 +1,5 @@
 .image {
+    display: block;
     width: 100%;
     object-fit: cover;
     height: 100%;
@@ -7,9 +8,34 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.image:hover {
+
+
+.card {
+    position: relative;
+    border-radius: 8px;
+}
+
+.likes {
+    font-size: 12px;
+    color: red;
+}
+
+.likesContent {
+    display: none;
+}
+
+
+.card:hover .likesContent {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.card:hover {
     cursor: pointer;
     transform: scale(1.07);
     box-shadow: 1px 1px 6px rgb(7, 62, 61);
-
 }

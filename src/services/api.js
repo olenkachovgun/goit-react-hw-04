@@ -16,16 +16,16 @@ import axios from "axios";
 //   return data;
 // };
 
-const BASE_URL = "https://api.unsplash.com/search/photos";
+const BASE_URL = "https://api.unsplash.com/search55/photos";
 const API_KEY = "UOB7k7dbf0ho9w16EFpuYoAu4izBwqloeRx7yFlslV8";
 
-export async function fetchPhotos(query, page = 0, perPage = 5) {
+export async function fetchPhotos(query, page = 0) {
   const { data } = await axios(`${BASE_URL}`, {
     params: {
       client_id: API_KEY,
       query: query,
       page,
-      per_page: perPage,
+      // per_page: 10,
     },
   });
   return data.results;

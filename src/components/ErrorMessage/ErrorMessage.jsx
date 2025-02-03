@@ -1,5 +1,7 @@
+import toast from "react-hot-toast";
 const ErrorMessage = () => {
-  return <div>Error....Try again later!</div>;
+  toast.error("error.message");
+  return <></>;
 };
 
 export default ErrorMessage;
